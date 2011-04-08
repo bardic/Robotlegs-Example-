@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:VGroup xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		  xmlns:s="library://ns.adobe.com/flex/spark" 
+		  xmlns:mx="library://ns.adobe.com/flex/mx"
+		  height="100%" width="45" horizontalAlign="right">
+
+	<fx:Script>
+		<![CDATA[
+			public static const CREATURE_CONTROL_1_CLICKED:String		= "creatureControl1Clicked";
+			public static const CREATURE_CONTROL_2_CLICKED:String		= "creatureControl2Clicked";
+			public static const CREATURE_CONTROL_3_CLICKED:String		= "creatureControl3Clicked";
+			public static const CREATURE_CLEAR_CLICKED:String			= "creeatureClearClicked";
+		]]>
+	</fx:Script>
+
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	
+	<s:Button skinClass="styling.skins.buttons.Creature1BtnSkin" buttonMode="true"
+			  click="dispatchEvent(new Event(CREATURE_CONTROL_1_CLICKED))"/>
+	<s:Button skinClass="styling.skins.buttons.Creature2BtnSkin" buttonMode="true"
+			  click="dispatchEvent(new Event(CREATURE_CONTROL_2_CLICKED))"/>
+	<s:Button skinClass="styling.skins.buttons.Creature3BtnSkin" buttonMode="true"
+			  click="dispatchEvent(new Event(CREATURE_CONTROL_3_CLICKED))"/>
+	
+	<mx:Spacer height="100%"/>
+	
+	<s:Button skinClass="styling.skins.buttons.ClearCreaturesBtnSkin" buttonMode="true"
+			  click="dispatchEvent(new Event(CREATURE_CLEAR_CLICKED))"/>
+	
+</s:VGroup>
